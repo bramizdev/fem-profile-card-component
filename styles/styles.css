@@ -112,6 +112,12 @@ body {
   color: var(--clr-primary-800);
 }
 
+@media (min-width: 64rem) {
+  body {
+    background-position: bottom 50vh right 51vw, top 50vh left 48.5vw;
+  }
+}
+
 .footer {
   font-size: 0.75rem;
   position: absolute;
@@ -119,6 +125,21 @@ body {
   width: 100%;
   text-align: center;
   padding: 1rem;
+  transform: font-weight 0.3s ease;
+}
+
+.footer a {
+  color: var(--clr-neutral-100);
+  text-decoration: none;
+}
+
+.footer a:is(:hover, :focus) {
+  font-weight: var(--fw-700);
+}
+
+.footer a:focus {
+  outline: 2px solid var(--clr-neutral-100);
+  outline-offset: 3px;
 }
 
 /* Card */
@@ -130,12 +151,12 @@ body {
 
 .profile-card__details {
   position: relative;
-  padding-top: 5rem;
+  padding-top: 4.5rem;
 }
 
 .profile-card__picture {
   position: absolute;
-  top: -3rem;
+  top: -3.25rem;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 50%;
